@@ -1,0 +1,66 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@mixin Flex($flexdirection,$wrap,$justify,$align){
+    display: flex;
+    flex-flow: $flexdirection $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+#root{
+    @include Flex(row,wrap,center,center);
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    .Title{
+        @include Flex(row,wrap,center,center);
+        position: absolute;
+        z-index: 1;
+        text-align: center;
+        width: 20%;
+        height: 7%;
+        top: 33%;
+        h3{
+            
+        }
+        button{
+            position: absolute;
+            height: 50%;
+            width: 50%;
+            border: none;
+            background-color: transparent;
+            border: 1px,solid,black;
+            top: 150%;
+            left: 25%;
+            text-align: center;
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: white;
+                left: 50%;
+                top: 0%;
+                opacity: .3;
+                transform: translate(-50%,0%);
+                z-index: -1;
+             }
+        }
+        &:before {
+           content: "";
+           position: absolute;
+           height: 100%;
+           width: 100%;
+           background-color: white;
+           left: 50%;
+           opacity: .3;
+           transform: translate(-50%,0%);
+           z-index: -1;
+        }
+    }
+}

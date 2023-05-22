@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+#root .Title {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  width: 20%;
+  height: 7.5%;
+  top: 33%;
+}
+#root .Title button {
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  border: none;
+  background-color: transparent;
+  border: 1px, solid, black;
+  top: 150%;
+  left: 25%;
+  text-align: center;
+}
+#root .Title button:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  left: 50%;
+  top: 0%;
+  opacity: 0.3;
+  transform: translate(-50%, 0%);
+  z-index: -1;
+}
+#root .Title:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  left: 50%;
+  opacity: 0.3;
+  transform: translate(-50%, 0%);
+  z-index: -1;
+}/*# sourceMappingURL=CSS.css.map */
